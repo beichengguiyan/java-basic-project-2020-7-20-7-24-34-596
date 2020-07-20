@@ -14,9 +14,10 @@ public class BowlingGameTest {
         bowlingGame.roll(hits);
         int actual = bowlingGame.getScore();
         //then
-        Assert.assertEquals(expected,actual);
+        Assert.assertEquals(expected, actual);
 
     }
+
     @Test
     public void should_return_0_when_given_3_4() {
         //given
@@ -29,8 +30,22 @@ public class BowlingGameTest {
         bowlingGame.roll(hits02);
         int actual = bowlingGame.getScore();
         //then
-        Assert.assertEquals(expected,actual);
+        Assert.assertEquals(expected, actual);
+    }
 
+    @Test
+    public void should_return_0_when_given_hits_20_times() {
+        //given
+        int[] hitsArray = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+        int expected = 20;
+        BowlingGame bowlingGame = new BowlingGame();
+        //when
+        for (int hit : hitsArray) {
+            bowlingGame.roll(hit);
+        }
+        int actual = bowlingGame.getScore();
+        //then
+        Assert.assertEquals(expected, actual);
     }
 
 }
