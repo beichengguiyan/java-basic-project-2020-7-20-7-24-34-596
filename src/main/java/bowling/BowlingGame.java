@@ -14,11 +14,11 @@ public class BowlingGame {
     }
 
     public void roll(int hits) {
-        currentFrame.roll(hits);
         if (currentFrame.isEnd() && frames.size() < 10) {
             currentFrame = new Frame();
             frames.add(currentFrame);
         }
+        currentFrame.roll(hits);
     }
 
     public int getScore() {

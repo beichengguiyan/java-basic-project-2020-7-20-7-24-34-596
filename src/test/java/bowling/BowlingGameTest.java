@@ -63,4 +63,19 @@ public class BowlingGameTest {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void should_return_0_when_given_hits_5_21_times() {
+        //given
+        int[] hitsArray = {5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,5};
+        int expected = 150;
+        BowlingGame bowlingGame = new BowlingGame();
+        //when
+        for (int hit : hitsArray) {
+            bowlingGame.roll(hit);
+        }
+        int actual = bowlingGame.getScore();
+        //then
+        Assert.assertEquals(expected, actual);
+    }
+
 }
