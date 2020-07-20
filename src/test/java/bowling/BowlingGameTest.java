@@ -48,4 +48,19 @@ public class BowlingGameTest {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void should_return_0_when_given_hits_5_5_5() {
+        //given
+        int[] hitsArray = {5,5,5};
+        int expected = 20;
+        BowlingGame bowlingGame = new BowlingGame();
+        //when
+        for (int hit : hitsArray) {
+            bowlingGame.roll(hit);
+        }
+        int actual = bowlingGame.getScore();
+        //then
+        Assert.assertEquals(expected, actual);
+    }
+
 }

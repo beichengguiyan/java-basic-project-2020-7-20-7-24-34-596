@@ -25,4 +25,12 @@ public class Frame {
             return false;
         }
     }
+
+    public List<Integer> getRolls() {
+        return rolls;
+    }
+
+    public void setRolls(List<Integer> rolls) {
+        this.rolls = rolls;
+    }
 }
