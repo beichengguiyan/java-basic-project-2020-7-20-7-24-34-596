@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class BowlingGameTest {
     @Test
-    public void should_return_0_when_given_1() {
+    public void should_return_1_when_given_1() {
         //given
         int hits = 1;
         int expected = 1;
@@ -19,7 +19,7 @@ public class BowlingGameTest {
     }
 
     @Test
-    public void should_return_0_when_given_3_4() {
+    public void should_return_7_when_given_3_4() {
         //given
         int hits01 = 3;
         int hits02 = 4;
@@ -34,7 +34,7 @@ public class BowlingGameTest {
     }
 
     @Test
-    public void should_return_0_when_given_hits_20_times() {
+    public void should_return_20_when_given_hits_20_times() {
         //given
         int[] hitsArray = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
         int expected = 20;
@@ -49,7 +49,7 @@ public class BowlingGameTest {
     }
 
     @Test
-    public void should_return_0_when_given_hits_5_5_5() {
+    public void should_return_20_when_given_hits_5_5_5() {
         //given
         int[] hitsArray = {5,5,5};
         int expected = 20;
@@ -64,7 +64,7 @@ public class BowlingGameTest {
     }
 
     @Test
-    public void should_return_0_when_given_hits_5_21_times() {
+    public void should_return_150_when_given_hits_5_21_times() {
         //given
         int[] hitsArray = {5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,5};
         int expected = 150;
